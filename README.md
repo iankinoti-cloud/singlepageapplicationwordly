@@ -15,7 +15,7 @@ A single-page application (SPA) for searching English words and exploring their 
 
 1. Clone or download the repository.
 2. Open `index.html` in any modern web browser.
-3. Start searching for words!
+3. Start searching for words easily.
 
 ## Technologies Used
 
