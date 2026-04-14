@@ -29,4 +29,4 @@ Powered by the [Free Dictionary API](https://api.dictionaryapi.dev/).
 
 ## License
 
-This project is open-source. Feel free to use and modify.
+This is a wordly lab.
