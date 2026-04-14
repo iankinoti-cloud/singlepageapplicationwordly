@@ -21,7 +21,7 @@ A single-page application (SPA) for searching English words and exploring their 
 
 - **HTML5**: Structure and semantics.
 - **CSS3**: Styling with custom properties and themes.
-- **JavaScript (ES6+)**: Logic, API calls, and interactivity.
+- **JavaScript **: Logic, API calls, and interactivity.
 
 ## API
 
