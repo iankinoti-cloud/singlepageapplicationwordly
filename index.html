@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Wordly Dictionary SPA</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<main class="app" aria-label="Wordly dictionary app">
+		<header class="header">
+			<h1>Wordly Interactive Dictionary</h1>
+			<button id="themeToggle" class="btn-secondary" type="button">Switch Theme</button>
+		</header>
+
+		<section class="controls" aria-label="Dictionary controls">
+			<form id="searchForm" aria-label="Dictionary word search form">
+				<input id="wordInput" name="word" type="text" placeholder="Search a word (e.g., eloquent)" autocomplete="off" aria-label="Search for an English word" required />
+				<button type="submit" class="btn-primary">Search</button>
+			</form>
+			<p id="status" class="status">Type a word to begin.</p>
+		</section>
+
+		<section class="content">
+			<div id="errorBox" class="error hidden" role="alert" aria-live="assertive"></div>
+
+			<article id="resultCard" class="card hidden" aria-live="polite">
+				<h2 id="resultWord"></h2>
+				<div class="meta" id="resultMeta"></div>
+				<p id="resultDefinition" class="line"></p>
+				<p id="resultExample" class="line"></p>
+				<p id="resultSynonyms" class="line"></p>
+				<p id="resultSource" class="line" aria-live="polite"></p>
+				<div class="result-actions">
+					<button id="audioBtn" type="button" class="btn-audio hidden" aria-label="Play pronunciation audio">Play Pronunciation</button>
+					<button id="favoriteBtn" type="button" class="btn-secondary">Save to Favorites</button>
+				</div>
+				<audio id="audioPlayer" preload="none"></audio>
+			</article>
+
+			<article class="card">
+				<h3>Favorite Words</h3>
+				<p class="status">Click any saved word to search it instantly.</p>
+				<ul id="favoritesList" class="favorites-list"></ul>
+			</article>
+		</section>
+	</main>
+
+	<script src="index.js"></script>
+</body>
+</html>

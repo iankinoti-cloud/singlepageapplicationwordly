@@ -1,0 +1,264 @@
+:root {
+	--bg: #f4f7fb;
+	--surface: #ffffff;
+	--text: #1a1f2c;
+	--muted: #4a566d;
+	--accent: #0f766e;
+	--accent-2: #164e63;
+	--warning: #b91c1c;
+	--chip: #dbeafe;
+	--saved: #fef3c7;
+	--shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: radial-gradient(circle at top right, #d1fae5 0%, var(--bg) 45%, #e0f2fe 100%);
+	color: var(--text);
+	min-height: 100vh;
+	padding: 24px;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app {
+	max-width: 860px;
+	margin: 0 auto;
+	background: var(--surface);
+	border-radius: 20px;
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 20px 24px;
+	background: linear-gradient(120deg, var(--accent), var(--accent-2));
+	color: #f8fafc;
+}
+
+.header h1 {
+	margin: 0;
+	font-size: 1.4rem;
+	letter-spacing: 0.3px;
+}
+
+.controls {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	padding: 18px 24px;
+	border-bottom: 1px solid #e2e8f0;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.controls form {
+	display: flex;
+	gap: 10px;
+	flex: 1;
+	min-width: 250px;
+}
+
+input[type="text"] {
+	width: 100%;
+	border: 1px solid #cbd5e1;
+	border-radius: 12px;
+	padding: 12px 14px;
+	font-size: 1rem;
+	color: var(--text);
+	background: #ffffff;
+	outline: none;
+	transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.17);
+}
+
+button {
+	border: none;
+	border-radius: 12px;
+	padding: 11px 14px;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: transform 0.12s ease, opacity 0.2s ease;
+}
+
+button:hover {
+	transform: translateY(-1px);
+	opacity: 0.95;
+}
+
+.btn-primary {
+	background: var(--accent);
+	color: #f8fafc;
+	min-width: 120px;
+}
+
+.btn-secondary {
+	background: #e2e8f0;
+	color: #0f172a;
+}
+
+.content {
+	padding: 20px 24px 28px;
+	display: grid;
+	gap: 18px;
+}
+
+.card {
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	padding: 16px;
+	background: #ffffff;
+	transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.card.saved {
+	background: var(--saved);
+	border-color: #f59e0b;
+}
+
+.meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 8px 0 0;
+}
+
+.chip {
+	background: var(--chip);
+	color: #0f172a;
+	border-radius: 999px;
+	padding: 5px 10px;
+	font-size: 0.84rem;
+}
+
+.line {
+	color: var(--muted);
+	margin: 8px 0;
+	line-height: 1.5;
+}
+
+.result-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 12px;
+}
+
+.btn-audio {
+	background: #0ea5e9;
+	color: #f8fafc;
+}
+
+.hidden {
+	display: none;
+}
+
+.error {
+	border: 1px solid #fecaca;
+	border-radius: 12px;
+	background: #fef2f2;
+	color: var(--warning);
+	padding: 12px;
+	font-size: 0.95rem;
+}
+
+.favorites-list {
+	list-style: none;
+	margin: 10px 0 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.favorites-list li {
+	background: #f1f5f9;
+	border: 1px solid #cbd5e1;
+	border-radius: 999px;
+	padding: 6px 11px;
+	font-size: 0.85rem;
+	color: #0f172a;
+	cursor: pointer;
+}
+
+.favorites-list li.favorites-empty {
+	cursor: default;
+	opacity: 0.8;
+	color: var(--muted);
+}
+
+.status {
+	color: var(--muted);
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+body.theme-night {
+	--bg: #0f172a;
+	--surface: #111827;
+	--text: #e5e7eb;
+	--muted: #94a3b8;
+	--accent: #14b8a6;
+	--accent-2: #0369a1;
+	--chip: #1e293b;
+	--saved: #3f2f08;
+	--shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+}
+
+body.theme-night .card,
+body.theme-night input[type="text"] {
+	background: #111827;
+	border-color: #334155;
+	color: #e5e7eb;
+}
+
+body.theme-night .btn-secondary {
+	background: #334155;
+	color: #e2e8f0;
+}
+
+body.theme-night .btn-audio {
+	background: #0284c7;
+}
+
+body.theme-night .favorites-list li {
+	background: #1f2937;
+	border-color: #334155;
+	color: #e5e7eb;
+}
+
+body.theme-night .favorites-list li.favorites-empty {
+	background: #0f172a;
+	color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+	body {
+		padding: 12px;
+	}
+
+	.controls {
+		padding: 14px;
+	}
+
+	.content {
+		padding: 14px;
+	}
+
+	.btn-primary {
+		min-width: 92px;
+	}
+}
