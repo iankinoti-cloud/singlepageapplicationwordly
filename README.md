@@ -1,6 +1,6 @@
 # Wordly Interactive Dictionary
 
-It is a single-page application (SPA) for searching English words and exploring their meanings, pronunciations, and more.
+It is a single-page application for searching English words and exploring their meanings, pronunciations, and more.
 
 ## Features
 
